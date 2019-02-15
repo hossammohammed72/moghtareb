@@ -16,7 +16,6 @@ Route::get('/', 'HomeController@index')->name('home');
 //Route::middleware('auth')->group(function(){
 Route::get('/room/add','RoomController@index')->name('room.add');
 Route::get('/person/add','PersonController@index')->name('person.add');
-
-Route::get('/person','PersonController@index');
+Route::POST('/person/add','PersonController@index')->name('person.create');
 
 //});
