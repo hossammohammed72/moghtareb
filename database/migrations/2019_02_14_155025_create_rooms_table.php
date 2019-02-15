@@ -21,7 +21,7 @@ class CreateRoomsTable extends Migration
             $table->integer('desks');
             $table->boolean('balcony');
             $table->boolean('ac');
-            $table->integer('price');
+            $table->integer('rent');
             $table->string('city');
             $table->string('address');
             $table->string('image');

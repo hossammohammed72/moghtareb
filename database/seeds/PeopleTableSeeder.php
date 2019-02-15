@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PersonsTableSeeder extends Seeder
+class PeopleTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class PersonsTableSeeder extends Seeder
     public function run()
     {
        //
-        for ($i=1; $i <50 ; $i++) { 
+        for ($i=1; $i <50 ; $i++) {
         $faker = Faker\Factory::create();
         $person = new App\Models\Person;
         $person->user_id = 1;
@@ -22,6 +22,7 @@ class PersonsTableSeeder extends Seeder
         $person->age = $i % 2 == 0 ? "1" : "0";
         $person->student = $i % 2 == 0 ? "1" : "0";
         $person->city = $faker->city;
+        $person->rent = rand(200,700);
         $person->gender = $i % 2 == 0 ? "1" : "0";
         $person->save();
       }

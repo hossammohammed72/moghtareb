@@ -13,7 +13,7 @@ class RoomsTableSeeder extends Seeder
     public function run()
     {
         //
-    	for ($i=1; $i <30 ; $i++) { 
+    	for ($i=1; $i <30 ; $i++) {
         $faker = Faker\Factory::create();
         $room = new App\Models\Room;
         $room->user_id = $i;
@@ -21,11 +21,12 @@ class RoomsTableSeeder extends Seeder
         $room->desks = rand(1,20);
         $room->balcony = $i % 2 == 0 ? "1" : "0";
         $room->ac = $i % 2 == 0 ? "1" : "0";
-        $room->price = rand(200,3000);
+        $room->rent = rand(200,3000);
+        $room->beds = rand(1,4);
         $room->city = $faker->city;
         $room->address = $faker->address;
         $room->image = $i.'.jpg';
-        $room->save();  
+        $room->save();
       }
     }
 }
