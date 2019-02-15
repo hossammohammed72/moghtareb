@@ -15,7 +15,7 @@ class CreatePersonsTable extends Migration
     {
         Schema::create('persons', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsinged('user_id');
+            $table->integer('user_id')->unsigned();
             $table->boolean('smoking');
             $table->boolean('loud_voice');
             $table->boolean('ac');
