@@ -16,14 +16,14 @@ class PersonsTableSeeder extends Seeder
         $faker = Faker\Factory::create();
         $person = new App\Models\Person;
         $person->user_id = 1;
-        $person->smoking = rand(0,1) < 0.5;
-        $person->loud_voice = rand(0,1) < 0.5;
-        $person->ac = rand(0,1) < 0.5;
-        $person->age = rand(0,1) < 0.5;
-        $person->student = rand(0,1) < 0.5;
+        $person->smoking = $i % 2 == 0 ? "1" : "0";
+        $person->loud_voice = $i % 2 == 0 ? "1" : "0";
+        $person->ac = $i % 2 == 0 ? "1" : "0";
+        $person->age = $i % 2 == 0 ? "1" : "0";
+        $person->student = $i % 2 == 0 ? "1" : "0";
         $person->city = $faker->city;
-        $person->gender = $faker->gender;
-        $person->save();  
+        $person->gender = $i % 2 == 0 ? "1" : "0";
+        $person->save();
       }
     }
 }

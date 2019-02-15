@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Room;
 
 class RoomsTableSeeder extends Seeder
 {
@@ -18,8 +19,8 @@ class RoomsTableSeeder extends Seeder
         $room->user_id = $i;
         $room->cupboards = rand(1,20);
         $room->desks = rand(1,20);
-        $room->balcony = rand(0,1) < 0.5;
-        $room->ac = rand(0,1) < 0.5;
+        $room->balcony = $i % 2 == 0 ? "1" : "0";
+        $room->ac = $i % 2 == 0 ? "1" : "0";
         $room->price = rand(200,3000);
         $room->city = $faker->city;
         $room->address = $faker->address;
