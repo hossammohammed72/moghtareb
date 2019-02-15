@@ -24,19 +24,19 @@
 				<div class="single-post d-flex flex-row" style="border-radius:40px; ">
 					<div class="col-lg-12">
 						<h2 class="title">Walee hma</h2>
-						<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right" style="margin-top: 20px;">
+						<form class="form-area "   method="get" class="contact-form text-right" style="margin-top: 20px;">
 							<div class="row">	
 								<div class="col-lg-12 form-group">
 									<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
 								    <span class="button-checkbox">
 								        <button type="button" class="btn" data-color="success">Success</button>
-								        <input type="checkbox" class="hidden" checked />
+								        <input type="checkbox" name="smoke" class="hidden" checked/ style="display: none;">
 								    </span>
 									<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
 
 									<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
 									<textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-									<button class="primary-btn mt-20 text-white" style="float: right;">Submit</button>
+									<button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Submit</button>
 									<div class="mt-20 alert-msg" style="text-align: left;"></div>
 								</div>
 							</div>
@@ -48,5 +48,89 @@
 	</div>	
 </section>
 <!-- End post Area -->
+
+@endsection
+
+
+@section('scripts')
+<script type="text/javascript">
+$(function () {
+    $('.button-checkbox').each(function () {
+
+        // Settings
+        var $widget = $(this),
+            $button = $widget.find('button'),
+            $checkbox = $widget.find('input:checkbox'),
+            color = $button.data('color'),
+            settings = {
+                on: {
+                    icon: 'glyphicon glyphicon-check'
+                },
+                off: {
+                    icon: 'glyphicon glyphicon-unchecked'
+                }
+            };
+
+        // Event Handlers
+        $button.on('click', function () {
+            $checkbox.prop('checked', !$checkbox.is(':checked'));
+            $checkbox.triggerHandler('change');
+            updateDisplay();
+        });
+        $checkbox.on('change', function () {
+            updateDisplay();
+        });
+
+        // Actions
+        function updateDisplay() {
+            var isChecked = $checkbox.is(':checked');
+
+            // Set the button's state
+            $button.data('state', (isChecked) ? "on" : "off");
+
+            // Set the button's icon
+            $button.find('.state-icon')
+                .removeClass()
+                .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+            // Update the button's color
+            if (isChecked) {
+                $button
+                    .removeClass('btn-default')
+                    .addClass('btn-' + color + ' active');
+            }
+            else {
+                $button
+                    .removeClass('btn-' + color + ' active')
+                    .addClass('btn-default');
+            }
+        }
+
+        // Initialization
+        function init() {
+
+            updateDisplay();
+
+            // Inject the icon if applicable
+            if ($button.find('.state-icon').length === 0) {
+                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+            }
+        }
+        init();
+    });
+});
+
+
+
+
+
+var     new_checkbox_button = function(name,id){
+            return "<li><span class='button-checkbox'><button type='button' class='btn btn-sm btn-primary active' data-color='primary'><i class='state-icon glyphicon glyphicon-check'></i>&nbsp;"+name+"</button><input type='checkbox' class='hidden' checked=''></span></li>";
+        };
+
+$("#add").click(function(){
+       $("#selected_targets").append(new_checkbox_button("lallalala","1111"));
+});
+</script>
 
 @endsection
