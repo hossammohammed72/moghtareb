@@ -28,7 +28,10 @@
 							<div class="row">	
 								<div class="col-lg-12 form-group">
 									<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-								
+								    <span class="button-checkbox">
+								        <button type="button" class="btn" data-color="success">Success</button>
+								        <input type="checkbox" class="hidden" checked />
+								    </span>
 									<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
 
 									<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
