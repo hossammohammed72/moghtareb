@@ -17,13 +17,13 @@
 	<!-- Site Title -->
 	<title>Moghtarb</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--CSS============================================= -->
 		<link rel="stylesheet" href="{{asset('css/linearicons.css')}}">
 		<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
 		<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 		<link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
-		<link rel="stylesheet" href="{{asset('css/nice-select.css')}}">					
+		<link rel="stylesheet" href="{{asset('css/nice-select.css')}}">
 		<link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
 		<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
 		<link rel="stylesheet" href="{{asset('css/main.css')}}">
@@ -51,14 +51,15 @@
 			            </ul>
 			          </li>
 			          <li><a class="ticker-btn" href="#">Signup</a></li>
-			          <li><a class="ticker-btn" href="#">Login</a></li>				          				          
+			          <li><a class="ticker-btn" href="#">Login</a></li>
 			        </ul>
-			      </nav><!-- #nav-menu-container -->		    		
+			      </nav><!-- #nav-menu-container -->
 		    	</div>
 		    </div>
-		  </header><!-- #header -->
-		  @yield('content')
-		<!-- start footer Area -->		
+          </header><!-- #header -->
+            @yield('content')
+
+		<!-- start footer Area -->
 		<footer class="footer-area section-gap">
 			<div class="container">
 				<div class="row">
@@ -86,15 +87,15 @@
 											<div style="position: absolute; left: -5000px;">
 												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
 											</div>
-										</div> 
-									
+										</div>
+
 										<div class="col-lg-4 col-md-12">
 											<button class="nw-btn primary-btn">Subscribe<span class="lnr lnr-arrow-right"></span></button>
-										</div> 
-									</div>		
+										</div>
+									</div>
 									<div class="info"></div>
 								</form>
-							</div>		
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-3  col-md-12">
@@ -111,7 +112,7 @@
 								<li><img src="img/i8.jpg" alt=""></li>
 							</ul>
 						</div>
-					</div>						
+					</div>
 				</div>
 
 				<div class="row footer-bottom d-flex justify-content-between">
@@ -127,23 +128,23 @@
 				</div>
 			</div>
 		</footer>
-		<!-- End footer Area -->		
+		<!-- End footer Area -->
 
 		<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>			
+		<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-			<script src="{{asset('js/easing.min.js')}}"></script>			
+			<script src="{{asset('js/easing.min.js')}}"></script>
 		<script src="{{asset('js/hoverIntent.js')}}"></script>
-		<script src="{{asset('js/superfish.min.js')}}"></script>	
+		<script src="{{asset('js/superfish.min.js')}}"></script>
 		<script src="{{asset('js/jquery.ajaxchimp.min.js')}}"></script>
-		<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>	
-		<script src="{{asset('js/owl.carousel.min.js')}}"></script>			
+		<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+		<script src="{{asset('js/owl.carousel.min.js')}}"></script>
 		<script src="{{asset('js/jquery.sticky.js')}}"></script>
-		<script src="{{asset('js/jquery.nice-select.min.js')}}"></script>			
-		<script src="{{asset('js/parallax.min.js')}}"></script>		
-		<script src="{{asset('js/mail-script.js')}}"></script>	
-		<script src="{{asset('js/main.js')}}"></script>	
+		<script src="{{asset('js/jquery.nice-select.min.js')}}"></script>
+		<script src="{{asset('js/parallax.min.js')}}"></script>
+		<script src="{{asset('js/mail-script.js')}}"></script>
+		<script src="{{asset('js/main.js')}}"></script>
 
 		@yield('scripts')
 	</body>
