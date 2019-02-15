@@ -27,6 +27,7 @@
 		<link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
 		<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
 		<link rel="stylesheet" href="{{asset('css/main.css')}}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
 	</head>
 	<body>
 		  <header id="header" id="home">
@@ -145,7 +146,11 @@
 		<script src="{{asset('js/parallax.min.js')}}"></script>
 		<script src="{{asset('js/mail-script.js')}}"></script>
 		<script src="{{asset('js/main.js')}}"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 
+		<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
 		@yield('scripts')
 	</body>
 </html>
