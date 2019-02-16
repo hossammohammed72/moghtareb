@@ -150,41 +150,4 @@ $("#add").click(function(){
 });
 </script>
 
-
-<script type="text/javascript">
-
-$.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-});
-
-$('#addForm').submit(function(e){
-    e.preventDefault();
-	var data = new FormData(this);
-	console.log(data);
-    $.ajax({
-        type: 'POST',
-        url: "{{route('person.create')}}",
-        data: data,
-	    dataType:'JSON',
-	    contentType: false,
-	    cache: false,
-	    processData: false,
-        success: function(data,status) {
-        	console.log("request sent");
-        	console.log(data);
-            if ((data.errors)) {
-            	if ((data.errors.title))  toastr.error(data.errors.title, 'Validation' , {timeOut: 3000});
-            	if ((data.errors.amount)) toastr.error(data.errors.amount, 'Validation' , {timeOut: 3000});
-            	if ((data.errors.file)) toastr.error(data.errors.file, 'Validation' , {timeOut: 3000});
-            } 
-            else 
-            {
-                toastr.success('Item added Successfully!', 'Done', {timeOut: 3000});
-            }
-        },
-    });
-});
-</script>
 @endsection
