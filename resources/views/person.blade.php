@@ -2,19 +2,19 @@
 
 @section('content')
 <!-- start banner Area -->
-<section class="banner-area relative" id="home">	
+<section class="banner-area relative" id="home">
 	<div class="overlay overlay-bg"></div>
 	<div class="container">
 		<div class="row d-flex align-items-center justify-content-center">
 			<div class="about-content col-lg-12">
 				<h1 class="text-white">
-					Tell Us About Yourself				
-				</h1>	
-			</div>											
+					Tell Us About Yourself
+				</h1>
+			</div>
 		</div>
 	</div>
 </section>
-<!-- End banner Area -->	
+<!-- End banner Area -->
 <!-- Start post Area -->
 <section class="post-area section-gap">
 	<div class="container" style="margin-top: -55px;">
@@ -25,7 +25,7 @@
 						<h2 class="title">Tell Us More About You</h2>
 						<form class="form-area" id="person.create" method="POST" class="contact-form text-right" style="margin-top: 20px;">
 							@csrf
-							<div class="row">	
+							<div class="row">
 								<div class="col-md-12 form-group">
 									<div class="form-group col-md-6">
 										<label>City</label>
@@ -72,12 +72,12 @@
 									<div class="mt-20 alert-msg" style="text-align: left;"></div>
 								</div>
 							</div>
-						</form>	
+						</form>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 </section>
 <!-- End post Area -->
 @endsection
@@ -178,8 +178,8 @@ $('#addForm').submit(function(e){
             	if ((data.errors.title))  toastr.error(data.errors.title, 'Validation' , {timeOut: 3000});
             	if ((data.errors.amount)) toastr.error(data.errors.amount, 'Validation' , {timeOut: 3000});
             	if ((data.errors.file)) toastr.error(data.errors.file, 'Validation' , {timeOut: 3000});
-            } 
-            else 
+            }
+            else
             {
                 toastr.success('Item added Successfully!', 'Done', {timeOut: 3000});
             }

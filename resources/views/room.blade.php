@@ -33,20 +33,70 @@
                                             <label for='bed'>
                                                 <i class='fa fa-bed'></i> Beds?
                                             </label>
-                                            <input type='number' name='cupboard' class='form-control'>
+                                            <select name="" id='' class="selectpicker show-menu-arrow form-control">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
                                         </div>
                                         <div class='col-md-3'>
                                                 <label for='bed'>
                                                     <i class='fas fa-cabinet-filling'></i>Cupboards?
                                                 </label>
-                                                <input type='number' name='cupboard' class='form-control'>
+                                                <select name="cupboard" id='cupboard' class="selectpicker show-menu-arrow form-control">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
                                         </div>
                                         <div class='col-md-3'>
                                                 <label for='bed'>
                                                     <i class='fas fa-office'></i>Desks?
                                                 </label>
-                                                <input type='number' name='cupboard' class='form-control'>
+                                                <select name="desk" id='desk' class="selectpicker show-menu-arrow form-control">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
                                         </div>
+                                        <div class='col-md-3'>
+                                                <label for='bed'>
+                                                    <i class='fas fa-office'></i>Rent?
+                                                </label>
+                                                <select name="rent" id='rent' class="selectpicker show-menu-arrow form-control">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                    </select>
+                                        </div>
+                                    </div>
+                                    <div class='row'>
+                                        <div class="col-md-6 form-group">
+                                            <div class="form-group col-md-6">
+                                                <label for='city'>City</label>
+                                                <select name="city" id='city' class="selectpicker show-menu-arrow form-control">
+                                                    <option value="Aswan">Aswan</option>
+                                                    <option value="Luxor">Luxor</option>
+                                                    <option value="Qena">Qena</option>
+                                                    <option value="Sohag">Sohag</option>
+                                                    <option value="Assiut">Assiut</option>
+                                                    <option value="Minya">Minya</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                                <div class="form-group col-md-6">
+                                                    <label for='city'>age</label>
+                                                    <select name="city" id='city' class="selectpicker show-menu-arrow form-control">
+                                                        <option value="Aswan">19</option>
+                                                        <option value="Luxor">20</option>
+                                                        <option value="Qena">21</option>
+                                                        <option value="Sohag">22</option>
+                                                        <option value="Assiut">23</option>
+                                                        <option value="Minya">24</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                     </div>
                                     <br>
                                     <div class='row'>
@@ -63,6 +113,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class='row'>
                                         <div class='col-md-12'>
                                             <span class="button-checkbox">
@@ -79,14 +130,21 @@
                                             </span>
                                         </div>
                                     </div>
+
+
+                                        <span class="button-checkbox">
+                                            <button type="button" class="btn" style='margin:10px;' data-color="info">Loud Voice</button>
+                                            <input type="checkbox" name="voice" class="hidden"  style="display: none;">
+                                        </span>
+                                        <span class="button-checkbox">
+                                            <button type="button" style='margin:10px;' class="btn" data-color="info">Student </button>
+                                            <input type="checkbox" name="student" class="hidden" style="display: none;">
+                                        </span>
                                     <br>
                                     <br>
-                                    <div class='row'>
-                                        <div class='col-md-12'>
-                                            <button type="submit" class="primary-btn mt-20 text-white" style="float: right;">Submit</button>
+                                         <button type="submit" class="primary-btn mt-20 text-white pull-right">Submit</button>
                                             <div class="mt-20 alert-msg" style="text-align: left;"></div>
-                                        </div>
-                                    </div>
+
 								</div>
 							</div>
 						</form>
@@ -179,6 +237,19 @@ var new_checkbox_button = function(name,id){
 $("#add").click(function(){
        $("#selected_targets").append(new_checkbox_button("lallalala","1111"));
 });
+$( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      //values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] ); //+ " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) );// +
+     // " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
 </script>
 
 @endsection
