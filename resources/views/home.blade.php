@@ -10,10 +10,10 @@
 				<div class="row d-flex justify-content-center">
 					<div class="menu-content col-lg-9">
 						<div class="title text-center">
-							<h1 class="mb-10 text-white">What are you looking For ? </h1>
+							<h1 class="mb-10 text-white our-h">Let us find you a partner	</h1>
 							<p class="text-white">Roommmates are our buddies and friends, So let's just pickthem right</p>
-                        <a class="primary-btn" href="{{route('room.add')}}">Roommate</a>
-							<a class="primary-btn" href="{{route('person.add')}}">Room</a>
+                        <a class="primary-btn" href="{{route('room.add')}}">I want a Roommate</a>
+							<a class="primary-btn" href="{{route('person.add')}}">I want a Room</a>
 						</div>
 					</div>
 				</div>
@@ -23,322 +23,266 @@
 </section>
 <!-- End banner Area -->
 
-<!-- Start feature-cat Area -->
-<section class="feature-cat-area pt-100" id="category">
-	<div class="container">
-		<div class="row d-flex justify-content-center">
-			<div class="menu-content pb-60 col-lg-10">
-				<div class="title text-center">
-					<h1 class="mb-10">Featured Job Categories</h1>
-					<p>Who are in extremely love with eco friendly system.</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-2 col-md-4 col-sm-6">
-				<div class="single-fcat">
-					<a href="category.html">
-						<img src="img/o1.png" alt="">
-					</a>
-					<p>Accounting</p>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-6">
-				<div class="single-fcat">
-					<a href="category.html">
-						<img src="img/o2.png" alt="">
-					</a>
-					<p>Development</p>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-6">
-				<div class="single-fcat">
-					<a href="category.html">
-						<img src="img/o3.png" alt="">
-					</a>
-					<p>Technology</p>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-6">
-				<div class="single-fcat">
-					<a href="category.html">
-						<img src="img/o4.png" alt="">
-					</a>
-					<p>Media & News</p>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-6">
-				<div class="single-fcat">
-					<a href="category.html">
-						<img src="img/o5.png" alt="">
-					</a>
-					<p>Medical</p>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-6">
-				<div class="single-fcat">
-					<a href="category.html">
-						<img src="img/o6.png" alt="">
-					</a>
-					<p>Goverment</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End feature-cat Area -->
 
 <!-- Start post Area -->
-<section class="post-area section-gap">
+<section class="post-area section-gap" id='rooms'>
 	<div class="container">
 		<div class="row justify-content-center d-flex">
-			<div class="col-lg-12 post-list">
-				<ul class="cat-list">
-					<li><a href="#">Recent</a></li>
-					<li><a href="#">Full Time</a></li>
-					<li><a href="#">Intern</a></li>
-					<li><a href="#">part Time</a></li>
-				</ul>
+			<div class="col-lg-12 post-list">	
 				<div class="single-post d-flex flex-row">
 					<div class="thumb">
-						<img src="img/post.png" alt="">
-						<ul class="tags">
+						<img src="{{asset('img/1.jpeg')}}" style='margin:10px; max-width:90%;' alt="">
+					<ul class="tags">
 							<li>
-								<a href="#">Art</a>
+								<a href="#">AC</a>
 							</li>
 							<li>
-								<a href="#">Media</a>
+								<a href="#">Smoking</a>
 							</li>
 							<li>
-								<a href="#">Design</a>
+								<a href="#">Elevator</a>
 							</li>
 						</ul>
 					</div>
-					<div class="details">
+					<div class="details" style='margin-top: 10px;'>
 						<div class="title d-flex flex-row justify-content-between">
 							<div class="titles">
-								<a href="single.html"><h4>Creative Art Designer</h4></a>
-								<h6>Premium Labels Limited</h6>
+								<a href="single.html"><h4>Aswan </h4></a>
+								<h4><span class="lnr lnr-map mr-1"></span>AboElressh-faculty of engineering</h4	>
 							</div>
-							<ul class="btns">
-								<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+								
+							<ul class="btns" style="margin-left: 50px;">
+								<li class="mb-2"><a href="#"><span class="lnr lnr-heart"></span></a></li>
 								<li><a href="#">Apply</a></li>
 							</ul>
+						
 						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
-						</p>
-						<h5>Job Nature: Full time</h5>
-						<p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
-						<p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+						<p class="address"><span class="fa fa-dollar"></span>200</p>
+						<h5>Age : 28</h5>
+						<h5>Cupboards : 2</h5>
+						<h5>Beds : 4</h5>
+						<p class="address"><span class="fa fa-user"></span> male</p>
+						
 					</div>
 				</div>
 				<div class="single-post d-flex flex-row">
 					<div class="thumb">
-						<img src="img/post.png" alt="">
-						<ul class="tags">
+					<img src="{{asset('img/2.jpeg')}}" style='margin:10px; max-width:90%;' alt="">
+					<ul class="tags">
 							<li>
-								<a href="#">Art</a>
+								<a href="#">AC</a>
 							</li>
 							<li>
-								<a href="#">Media</a>
+								<a href="#">Smoking</a>
 							</li>
 							<li>
-								<a href="#">Design</a>
+								<a href="#">Elevator</a>
 							</li>
 						</ul>
 					</div>
-					<div class="details">
+					<div class="details" style='margin-top: 10px;'>
 						<div class="title d-flex flex-row justify-content-between">
 							<div class="titles">
-								<a href="single.html"><h4>Creative Art Designer</h4></a>
-								<h6>Premium Labels Limited</h6>
+								<a href="single.html"><h4>Aswan </h4></a>
+								<h4><span class="lnr lnr-map mr-1"></span>AboElressh-faculty of engineering</h4	>
 							</div>
-							<ul class="btns">
-								<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+								
+							<ul class="btns" style="margin-left: 50px;">
+								<li class="mb-2"><a href="#"><span class="lnr lnr-heart"></span></a></li>
 								<li><a href="#">Apply</a></li>
 							</ul>
+						
 						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
-						</p>
-						<h5>Job Nature: Full time</h5>
-						<p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
-						<p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+						<p class="address"><span class="fa fa-dollar"></span>200</p>
+						<h5>Age : 23</h5>
+						<h5>Cupboards : 4</h5>
+						<h5>Beds : 6</h5>
+						<p class="address"><span class="fa fa-user"></span> male</p>
+						
 					</div>
 				</div>
 				<div class="single-post d-flex flex-row">
 					<div class="thumb">
-						<img src="img/post.png" alt="">
-						<ul class="tags">
+						<img src="{{asset('img/3.jpeg')}}" style='margin:10px; max-width:90%;' alt="">
+					<ul class="tags">
 							<li>
-								<a href="#">Art</a>
+								<a href="#">AC</a>
 							</li>
 							<li>
-								<a href="#">Media</a>
+								<a href="#">Smoking</a>
 							</li>
 							<li>
-								<a href="#">Design</a>
+								<a href="#">Elevator</a>
 							</li>
 						</ul>
 					</div>
-					<div class="details">
+					<div class="details" style='margin-top: 10px;'>
 						<div class="title d-flex flex-row justify-content-between">
 							<div class="titles">
-								<a href="single.html"><h4>Creative Art Designer</h4></a>
-								<h6>Premium Labels Limited</h6>
+								<a href="single.html"><h4>Aswan </h4></a>
+								<h4><span class="lnr lnr-map mr-1"></span>AboElressh-faculty of engineering</h4	>
 							</div>
-							<ul class="btns">
-								<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+								
+							<ul class="btns" style="margin-left: 50px;">
+								<li class="mb-2"><a href="#"><span class="lnr lnr-heart"></span></a></li>
 								<li><a href="#">Apply</a></li>
 							</ul>
+						
 						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
-						</p>
-						<h5>Job Nature: Full time</h5>
-						<p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
-						<p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+						<p class="address"><span class="fa fa-dollar"></span>200</p>
+						<h5>Age : 22</h5>
+						<h5>Cupboards : 2</h5>
+						<h5>Beds : 4</h5>
+						<p class="address"><span class="fa fa-user"></span> male</p>
+						
 					</div>
 				</div>
 				<div class="single-post d-flex flex-row">
 					<div class="thumb">
-						<img src="img/post.png" alt="">
-						<ul class="tags">
+						<img src="{{asset('img/1.jpeg')}}" style='margin:10px; max-width:90%;' alt="">
+					<ul class="tags">
 							<li>
-								<a href="#">Art</a>
+								<a href="#">AC</a>
 							</li>
 							<li>
-								<a href="#">Media</a>
+								<a href="#">Smoking</a>
 							</li>
 							<li>
-								<a href="#">Design</a>
+								<a href="#">Elevator</a>
 							</li>
 						</ul>
 					</div>
-					<div class="details">
+					<div class="details" style='margin-top: 10px;'>
 						<div class="title d-flex flex-row justify-content-between">
 							<div class="titles">
-								<a href="single.html"><h4>Creative Art Designer</h4></a>
-								<h6>Premium Labels Limited</h6>
+								<a href="single.html"><h4>Aswan </h4></a>
+								<h4><span class="lnr lnr-map mr-1"></span>AboElressh-faculty of engineering</h4	>
 							</div>
-							<ul class="btns">
-								<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+								
+							<ul class="btns" style="margin-left: 50px;">
+								<li class="mb-2"><a href="#"><span class="lnr lnr-heart"></span></a></li>
 								<li><a href="#">Apply</a></li>
 							</ul>
+						
 						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
-						</p>
-						<h5>Job Nature: Full time</h5>
-						<p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
-						<p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+						<p class="address"><span class="fa fa-dollar"></span>200</p>
+						<h5>Age : 27</h5>
+						<h5>Cupboards : 6</h5>
+						<h5>Beds : 10</h5>
+						<p class="address"><span class="fa fa-user"></span> male</p>
+						
 					</div>
 				</div>
 				<div class="single-post d-flex flex-row">
 					<div class="thumb">
-						<img src="img/post.png" alt="">
-						<ul class="tags">
+						<img src="{{asset('img/2.jpeg')}}" style='margin:10px; max-width:90%;' alt="">
+					<ul class="tags">
 							<li>
-								<a href="#">Art</a>
+								<a href="#">AC</a>
 							</li>
 							<li>
-								<a href="#">Media</a>
+								<a href="#">Smoking</a>
 							</li>
 							<li>
-								<a href="#">Design</a>
+								<a href="#">Elevator</a>
 							</li>
 						</ul>
 					</div>
-					<div class="details">
+					<div class="details" style='margin-top: 10px;'>
 						<div class="title d-flex flex-row justify-content-between">
 							<div class="titles">
-								<a href="single.html"><h4>Creative Art Designer</h4></a>
-								<h6>Premium Labels Limited</h6>
+								<a href="single.html"><h4>Aswan </h4></a>
+								<h4><span class="lnr lnr-map mr-1"></span>AboElressh-faculty of engineering</h4	>
 							</div>
-							<ul class="btns">
-								<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+								
+							<ul class="btns" style="margin-left: 50px;">
+								<li class="mb-2"><a href="#"><span class="lnr lnr-heart"></span></a></li>
 								<li><a href="#">Apply</a></li>
 							</ul>
+						
 						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
-						</p>
-						<h5>Job Nature: Full time</h5>
-						<p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
-						<p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+						<p class="address"><span class="fa fa-dollar"></span>200</p>
+						<h5>Age : 20</h5>
+						<h5>Cupboards : 1</h5>
+						<h5>Beds : 6</h5>
+						<p class="address"><span class="fa fa-user"></span> male</p>
+						
 					</div>
 				</div>
 				<div class="single-post d-flex flex-row">
 					<div class="thumb">
-						<img src="img/post.png" alt="">
-						<ul class="tags">
+						<img src="{{asset('img/3.jpeg')}}" style='margin:10px; max-width:90%;' alt="">
+					<ul class="tags">
 							<li>
-								<a href="#">Art</a>
+								<a href="#">AC</a>
 							</li>
 							<li>
-								<a href="#">Media</a>
+								<a href="#">Smoking</a>
 							</li>
 							<li>
-								<a href="#">Design</a>
+								<a href="#">Elevator</a>
 							</li>
 						</ul>
 					</div>
-					<div class="details">
+					<div class="details" style='margin-top: 10px;'>
 						<div class="title d-flex flex-row justify-content-between">
 							<div class="titles">
-								<a href="single.html"><h4>Creative Art Designer</h4></a>
-								<h6>Premium Labels Limited</h6>
+								<a href="single.html"><h4>Aswan </h4></a>
+								<h4><span class="lnr lnr-map mr-1"></span>AboElressh-faculty of engineering</h4	>
 							</div>
-							<ul class="btns">
-								<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+								
+							<ul class="btns" style="margin-left: 50px;">
+								<li class="mb-2"><a href="#"><span class="lnr lnr-heart"></span></a></li>
 								<li><a href="#">Apply</a></li>
 							</ul>
+						
 						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
-						</p>
-						<h5>Job Nature: Full time</h5>
-						<p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
-						<p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+						<p class="address"><span class="fa fa-dollar"></span>200</p>
+						<h5>Age : 25</h5>
+						<h5>Cupboards : 6</h5>
+						<h5>Beds : 3</h5>
+						<p class="address"><span class="fa fa-user"></span> male</p>
+						
 					</div>
 				</div>
 				<div class="single-post d-flex flex-row">
 					<div class="thumb">
-						<img src="img/post.png" alt="">
-						<ul class="tags">
+						<img src="{{asset('img/1.jpeg')}}" style='margin:10px; max-width:90%;' alt="">
+					<ul class="tags">
 							<li>
-								<a href="#">Art</a>
+								<a href="#">AC</a>
 							</li>
 							<li>
-								<a href="#">Media</a>
+								<a href="#">Smoking</a>
 							</li>
 							<li>
-								<a href="#">Design</a>
+								<a href="#">Elevator</a>
 							</li>
 						</ul>
 					</div>
-					<div class="details">
+					<div class="details" style='margin-top: 10px;'>
 						<div class="title d-flex flex-row justify-content-between">
 							<div class="titles">
-								<a href="single.html"><h4>Creative Art Designer</h4></a>
-								<h6>Premium Labels Limited</h6>
+								<a href="single.html"><h4>Aswan </h4></a>
+								<h4><span class="lnr lnr-map mr-1"></span>AboElressh-faculty of engineering</h4	>
 							</div>
-							<ul class="btns">
-								<li><a href="#"><span class="lnr lnr-heart"></span></a></li>
+								
+							<ul class="btns" style="margin-left: 50px;">
+								<li class="mb-2"><a href="#"><span class="lnr lnr-heart"></span></a></li>
 								<li><a href="#">Apply</a></li>
 							</ul>
+						
 						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporinc ididunt ut dolore magna aliqua.
-						</p>
-						<h5>Job Nature: Full time</h5>
-						<p class="address"><span class="lnr lnr-map"></span> 56/8, Panthapath Dhanmondi Dhaka</p>
-						<p class="address"><span class="lnr lnr-database"></span> 15k - 25k</p>
+						<p class="address"><span class="fa fa-dollar"></span>200</p>
+						<h5>Age : 22</h5>
+						<h5>Cupboards : 2</h5>
+						<h5>Beds : 4</h5>
+						<p class="address"><span class="fa fa-user"></span> male</p>
+						
 					</div>
 				</div>
 
-				<a class="text-uppercase loadmore-btn mx-auto d-block" href="category.html">Load More job Posts</a>
+				<a class="text-uppercase loadmore-btn mx-auto d-block" href="category.html">Load More</a>
 			</div>
 		</div>
 	</div>

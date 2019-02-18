@@ -23,55 +23,67 @@
 				<div class="single-post d-flex flex-row" style="border-radius:40px; ">
 					<div class="col-lg-12">
 						<h2 class="title">Tell Us More About You</h2>
-						<form class="form-area" id="person.create" method="POST" class="contact-form text-right" style="margin-top: 20px;">
+						<form class="form-area" id="person.create" action='{{route('home')}}/#rooms' class="contact-form text-right" style="margin-top: 20px;">
 							@csrf
 							<div class="row">
-								<div class="col-md-12 form-group">
-									<div class="form-group col-md-6">
-										<label>City</label>
-										<select name="city" class="selectpicker show-menu-arrow form-control">
-											<option value="Aswan">Aswan</option>
-											<option value="Luxor">Luxor</option>
-											<option value="Qena">Qena</option>
-											<option value="Sohag">Sohag</option>
-											<option value="Assiut">Assiut</option>
-											<option value="Minya">Minya</option>
-										</select>
-									</div>
-									<div class="form-group col-md-6">
-										<label>Age</label>
-										<input class="form-control" type="number" value="0" min="0" name="age">
-									</div>
-									<div class="controls">
-									    <label class="radio inline" for="gender-0">
-									      <input name="gender" id="gender-0" value="Male" checked="checked" type="radio">
-									      Male
-									    </label>
-									    <label class="radio inline" for="gender-1">
-									      <input name="gender" id="gender-1" value="Female" type="radio">
-									      Female
-									    </label>
-									</div>
-									<span class="button-checkbox">
-								        <button type="button" class="btn" data-color="success">Smoking</button>
-								        <input type="checkbox" name="smoke" class="hidden" style="display: none;">
-								    </span>
-								    <span class="button-checkbox">
-								        <button type="button" class="btn" data-color="success">Loud Voice</button>
-								        <input type="checkbox" name="voice" class="hidden"  style="display: none;">
-								    </span>
-								    <span class="button-checkbox">
-								        <button type="button" class="btn" data-color="success">Air  Conditioner</button>
-								        <input type="checkbox" name="ac" class="hidden"  style="display: none;">
-								    </span>
-								    <span class="button-checkbox">
-								        <button type="button" class="btn" data-color="success">Student </button>
-								        <input type="checkbox" name="student" class="hidden" style="display: none;">
-								    </span>
-									<button type="submit" class="btn btn-success" style="float: right;">Submit</button>
-									<div class="mt-20 alert-msg" style="text-align: left;"></div>
+								<div class="form-group col-md-4">
+									<label>City</label>
+									<select name="city" class="selectpicker show-menu-arrow form-control">
+										<option value="Aswan">Aswan</option>
+										<option value="Luxor">Luxor</option>
+										<option value="Qena">Qena</option>
+										<option value="Sohag">Sohag</option>
+										<option value="Assiut">Assiut</option>
+										<option value="Minya">Minya</option>
+									</select>
+								</div>
+								<div class="form-group col-md-4">
+									<label>Age</label>
+									<input class="form-control" type="number" value="0" min="0" name="age">
 								</div>
 							</div>
+							<div class='row'>
+									 <span for='smoke'>
+									 	Gender	
+									 </span>
+									 <Br>	
+									<span style="padding:10px;" class="button-checkbox">
+									        <button type="button" class="btn" data-color="success">Male</button>
+									        <input type="radio" name="smoke" id="smoke" class="hidden" style="display: none;">
+									    </span>
+									    <span style="padding:10px;" class="button-checkbox">
+									        <button type="button" class="btn" data-color="success">Female</button>
+									        <input type="radio" name="smoke" id="smoke" class="hidden"  style="display: none;">
+									    </span>
+							</div>
+							<div class="row">
+								<span for='smoke'>
+									 	Interests		
+									 </span>
+									 <Br>
+										<span style="padding:10px;" class="button-checkbox">
+									        <button type="button" class="btn" data-color="success">Smoking</button>
+									        <input type="checkbox" name="smoke" class="hidden" style="display: none;">
+									    </span>
+									    <span style="padding:10px;" class="button-checkbox">
+									        <button type="button" class="btn" data-color="success">Loud Voice</button>
+									        <input type="checkbox" name="voice" class="hidden"  style="display: none;">
+									    </span>
+									    <span style="padding:10px;" class="button-checkbox">
+									        <button type="button" class="btn" data-color="success">Air  Conditioner</button>
+									        <input type="checkbox" name="ac" class="hidden"  style="display: none;">
+									    </span>
+									    <span style="padding:10px;" class="button-checkbox">
+									        <button type="button" class="btn" data-color="success">Student </button>
+									        <input type="checkbox" name="student" class="hidden" style="display: none;">
+									    </span>
+								 	</div>
+								 	<Br>	
+									<div class="row">
+										<button type="submit" class="btn btn-success pull-left">Submit</button>
+										</div>
+								<div class="mt-20 alert-msg" style="text-align: left;"></div>
+							
 						</form>
 					</div>
 				</div>
@@ -150,4 +162,4 @@ $("#add").click(function(){
 });
 </script>
 
-@endsection
+@endsection		

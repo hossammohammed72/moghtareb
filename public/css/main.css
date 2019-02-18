@@ -75,7 +75,7 @@ figure {
 a {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
+  -outline-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -2031,8 +2031,8 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   display: inline-block;
   color: #fff;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 13px;
   text-transform: uppercase;
   outline: none;
 }
@@ -2304,7 +2304,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area .overlay-bg {
-  opacity: .95;
+  opacity: 0.65;
 }
 
 .banner-content {
@@ -4158,3 +4158,11 @@ body.mobile-nav-active #mobile-nav-toggle {
                End Blog Details  Page style
 ################
 */
+
+
+.our-h {
+
+  font-weight: bold;
+
+text-transform: capitalize;
+}

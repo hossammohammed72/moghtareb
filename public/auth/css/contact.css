@@ -1,0 +1,231 @@
+/* my form */
+
+body {
+    background-image: url('../img/bk.jpeg');
+    background-size: cover;
+    font-family: 'Staatliches', cursive;
+}
+
+.box {
+    width:800px;
+    height: 600px;
+    background: #CCC transparent;
+    position: relative;
+    transform: translate(-50%,-40%);
+    top: 50%;
+    left: 40%;
+    
+}
+
+@media (max-width: 767px) {
+  .box {
+    left: 14%;
+  }
+}
+
+
+.left {
+    width: 350px;
+    height: 500px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate();
+    border: 2px solid #777;
+    border-radius: 13%;
+    overflow: hidden;
+    background-color: #FFF;
+    z-index: 1;
+  }
+
+  .box .reg {
+    width: 350px;
+    height: 530px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 2px solid #777;
+    border-radius: 13%;
+    overflow: hidden;
+    background-color: #FFF;
+    display: none;
+  }
+  
+  .form .upper {
+  
+    text-align: center;
+    padding: 20px;
+    background:rgba(129, 104, 255, 0.8);
+    color: #FFF;
+    font-weight: bold;
+    width: 364px;
+    margin-left: -17px;
+  }
+  
+  .form .upper span {
+  
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  }
+  
+  
+  .form .login-form {
+  
+  margin-top: 30px;
+  
+  }
+
+  .form .login-form .astrisk {
+
+    position: relative;
+  }
+  
+  .form .login-form .astrisk i {
+
+    position: absolute;
+    top: 10px;
+    left: 47px;
+    font-size: 20px;
+  }
+  
+  .form .login-form input {
+  
+    display: block;
+    width: 270px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 13px;
+    text-indent: 18px;
+    text-transform: uppercase;
+  
+  }
+
+
+  
+  .form .login-form input[type='text'],
+  .form .login-form input[type='passowrd'] {
+  
+  
+  text-indent: 18px;
+
+  }
+  
+  
+  .form .login-form button {
+  
+  
+  margin-left: 100px;
+    width: 140px;
+    border-radius: 20px;
+    margin-top: 10px
+  }
+  
+  .form .login-form .check {
+  
+  height: 13px;
+    margin-left: -5px;
+  }
+  
+  .form-check {
+    position: relative;
+    display: block;
+    padding-left: 3.25rem;
+  }
+  
+  .form button {
+    background-color: #9a86ff;
+    outline-color: #9a86ff
+  }
+  
+  .form button:hover {
+    background-color: #9a86ff;
+  }
+  
+  .link-ref {
+  
+  text-align: center;
+  margin-top: 20px;
+  }
+  .margin {
+  
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 10px;
+    }
+  .link-ref a {
+  
+  color: #e74c3c
+  }
+
+  .link-ref a.down {
+  
+    color: #e74c3c;
+    margin-left: 33px;
+    }
+
+  .left .social-icons{
+
+    text-align: center;
+    margin-top: 10px;
+
+  }
+.box .left .form .social-icons ul {
+
+  padding: 5px;
+  /* margin: 0px; */
+  list-style: none;
+  margin-right: 40px;
+}
+  .box .left .form .social-icons ul li {
+
+    display: inline-block; 
+    padding: 5px;
+  }
+
+ .box .left .form .social-icons i.face  {
+  display: block;
+  padding: 5px;
+  width: 40px;
+  background-color: #3b5998;
+  /* text-align: center; */
+  margin-left: 40%;
+  margin-top: 8px;
+  height: 40px;
+  font-size: 15px;
+  color: #FFF;
+  border-radius: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  line-height: 30px;
+}
+
+.box .left .form .social-icons i.gmail  {
+  display: block;
+  padding: 5px;
+  width: 40px;
+  background-color: #AC3D31;
+  /* text-align: center; */
+  margin-left: 40%;
+  margin-top: 8px;
+  height: 40px;
+  font-size: 15px;
+  color: #FFF;
+  border-radius: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  line-height: 30px;
+}
+
+.box .left .form .social-icons a {
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  
+
+}

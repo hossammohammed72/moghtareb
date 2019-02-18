@@ -24,7 +24,7 @@
 				<div class="single-post d-flex flex-row" style="border-radius:40px; ">
 					<div class="col-lg-12">
                         <h2 class="title">Tell Them How Awesome Your Room is ?</h2>
-						<form class="form-area " class="contact-form text-right" style="margin-top: 20px;">
+						<form class="form-area " action='{{route('home')}}#rooms' class="contact-form text-right" style="margin-top: 20px;">
 
                             <div class="row">
 								<div class="col-lg-12 form-group">
@@ -114,7 +114,7 @@
                                         </div>
                                     </div>
 
-                                    <div class='row'>
+                                    <div class='row'>       
                                         <div class='col-md-12'>
                                             <span class="button-checkbox">
                                                 <button type="button" class="btn" style='margin:10px;' data-color="info">AC</button>

@@ -13,6 +13,8 @@
 
 Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
+Route::post('/home', 'HomeController@index')->name('home.post');
+Route::get('/login', 'HomeController@login')->name('login');
 //Route::middleware('auth')->group(function(){
 Route::get('/room/add','RoomController@index')->name('room.add');
 Route::get('/person/add','PersonController@index')->name('person.add');
