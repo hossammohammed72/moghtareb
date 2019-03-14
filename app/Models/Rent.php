@@ -7,13 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Rent extends Model
 {
     //
-    public function person()
+    public function user()
     {
-        return $this->belongsTo('App\Person');
+        return $this->belongsTo('App\User');
     }
+
     public function rooms()
     {
-        return $this->belongsTo('App\Room');
+        return $this->belongsTo('App\Models\Room');
     }
 
 }

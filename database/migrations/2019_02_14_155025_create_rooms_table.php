@@ -19,10 +19,22 @@ class CreateRoomsTable extends Migration
             $table->integer('beds');
             $table->integer('cupboards');
             $table->integer('desks');
-            $table->boolean('balcony');
-            $table->boolean('ac');
+            $table->boolean('balcony');//
+            $table->boolean('elevator');//
+            $table->boolean('microwave');//
+            $table->boolean('auto_washer');//
+            $table->boolean('tv');//
+            $table->boolean('ac'); //
+            $table->boolean('wifi'); //
+            $table->boolean('smoking'); //
+            $table->boolean('noise'); //
+            $table->boolean('sleep_early'); //
+            $table->boolean('coming_over'); //
+            $table->boolean('food_sharing'); //
+            $table->boolean('ac_lover'); //
             $table->integer('rent');
             $table->string('city');
+            $table->integer('rate'); //
             $table->string('address');
             $table->string('image');
             $table->timestamps();

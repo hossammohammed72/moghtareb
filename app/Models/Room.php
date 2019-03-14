@@ -11,6 +11,7 @@ class Room extends Model
     {
         return $this->belongsTo('App\User');
     }
+    
     public function rents()
     {
         return $this->hasMany('App\Rent');
