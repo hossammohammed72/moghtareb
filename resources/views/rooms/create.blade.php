@@ -24,8 +24,8 @@
 				<div class="single-post d-flex flex-row" style="border-radius:40px; ">
 					<div class="col-lg-12">
                         <h2 class="title">Tell Them How Awesome Your Room is ?</h2>
-						<form class="form-area " action='{{route('home')}}#rooms' class="contact-form text-right" style="margin-top: 20px;">
-
+						<form class="form-area " action='{{route('home')}}#rooms' class="contact-form text-right" style="margin-top: 20px;" id="addRoom">
+							@csrf
                             <div class="row">
 								<div class="col-lg-12 form-group">
                                    <div class='row'>
@@ -130,8 +130,6 @@
                                             </span>
                                         </div>
                                     </div>
-
-
                                         <span class="button-checkbox">
                                             <button type="button" class="btn" style='margin:10px;' data-color="info">Loud Voice</button>
                                             <input type="checkbox" name="voice" class="hidden"  style="display: none;">
@@ -211,7 +209,6 @@ $(function () {
                     .addClass('btn-default');
             }
         }
-
         // Initialization
         function init() {
 
@@ -252,4 +249,37 @@ $( function() {
   } );
 </script>
 
+
+<script type="text/javascript">
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+
+$('#addRoom').submit(function(e){
+    e.preventDefault();
+	var data = new FormData(this);
+    $.ajax({
+        type: 'POST',
+        url: "{{route('rooms.store')}}",
+        data: data,
+	    dataType:'JSON',
+	    contentType: false,
+	    cache: false,
+	    processData: false,
+        success: function(data,status) {
+        	console.log("request sent");
+            if ((data.errors)) {
+            	toastr.error("Check Your Inputs", 'Validation' , {timeOut: 3000});
+            } 
+            else 
+            {
+                toastr.success('Room added Successfully!', 'Done', {timeOut: 3000});
+            }
+        },
+    });
+});
+</script>
 @endsection
+		
