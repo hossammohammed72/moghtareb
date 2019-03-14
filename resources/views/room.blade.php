@@ -114,7 +114,7 @@
                                         </div>
                                     </div>
 
-                                    <div class='row'>       
+                                    <div class='row'>
                                         <div class='col-md-12'>
                                             <span class="button-checkbox">
                                                 <button type="button" class="btn" style='margin:10px;' data-color="info">AC</button>

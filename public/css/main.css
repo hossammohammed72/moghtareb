@@ -75,7 +75,7 @@ figure {
 a {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
-  -outline-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -2031,8 +2031,8 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   display: inline-block;
   color: #fff;
-  font-weight: 600;
-  font-size: 13px;
+  font-weight: 400;
+  font-size: 12px;
   text-transform: uppercase;
   outline: none;
 }
@@ -2304,7 +2304,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area .overlay-bg {
-  opacity: 0.65;
+  opacity: .95;
 }
 
 .banner-content {
@@ -2660,11 +2660,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
-.post-list .single-post .thumb .tags {
+.post-list .single-post .details .tags {
   margin-top: 30px;
 }
 
-.post-list .single-post .thumb .tags li {
+.post-list .single-post .thumb img {
+
+  width: 95%;
+}
+
+.post-list .single-post .details .tags li {
   margin-bottom: 5px;
   display: inline-block;
   background: #fff;
@@ -2676,7 +2681,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.3s ease 0s;
 }
 
-.post-list .single-post .thumb .tags li a {
+.post-list .single-post .details .tags li a {
   color: #777777;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -2684,12 +2689,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.3s ease 0s;
 }
 
-.post-list .single-post .thumb .tags li:hover {
+.post-list .single-post .details .tags li:hover {
   background-color: #49e4fa;
 }
 
-.post-list .single-post .thumb .tags li:hover a {
+.post-list .single-post .details.tags li:hover a {
   color: #fff;
+}
+
+.post-list .btns li{
+  margin-bottom: 5px;
 }
 
 @media (max-width: 736px) {
@@ -2713,6 +2722,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   .post-list .details {
     margin-top: 30px;
   }
+}
+
+.post-list .single-post .details {
+
+    margin-left: 10px;
 }
 
 .post-list .loadmore-btn {
@@ -4159,10 +4173,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 ################
 */
 
+/* my form */
 
-.our-h {
 
-  font-weight: bold;
-
-text-transform: capitalize;
-}

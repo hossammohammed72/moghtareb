@@ -1,0 +1,145 @@
+.container {
+    padding-top: 40px;
+}
+
+.profile .container .row  {
+
+    margin-right: 0px; 
+    margin-left: 0px; 
+}
+
+.profile .container .row .box {
+    overflow: hidden;
+}
+
+.profile .container .row .cards {
+
+    margin:30px;
+    cursor: pointer;
+}
+
+.imgBX {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+    background: #000;
+
+}
+
+.box:hover .imgBX {
+    transform: translateY(-195px);
+}
+
+
+.imgBX img {
+    transition: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+.box:hover .imgBX {
+
+    opacity: 0;
+}
+
+.our-wish {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+}
+
+.our-wish ul {
+
+    display: flex;
+}
+
+.our-wish ul li {
+    list-style: none;
+    margin-bottom: 5px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #eee;
+    margin: 0 3px;
+    border-radius: 50%;
+    transform: translateY(-100px);
+    opacity: 0;
+    
+    
+}
+
+.box:hover .our-wish ul li {
+    display: block;
+    transform: translateY(-100px);
+    transition: .5s ease-in-out;
+    opacity: 1;
+}
+
+.box:hover .our-wish ul li:nth-child(1) {
+
+    transition-delay: 0s;
+}
+
+.box:hover .our-wish ul li:nth-child(2)  {
+
+    transition-delay: 0.2s;
+}
+
+.box:hover .our-wish ul li:nth-child(3)  {
+
+    transition-delay: 0.3s;
+}
+
+.box:hover .our-wish ul li:nth-child(4)  {
+
+    transition-delay: 0.4s;
+}
+
+.our-wish ul li a {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    color: #777777;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 5px;
+
+}
+
+.our-wish ul li:hover{
+
+    background-color: #49e4fa;
+}
+
+.our-wish ul li:hover a {
+    color: #fff;
+  }
+
+  .title h5 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.title p {
+
+    font-size: 15px;
+}
+
+.title span{
+    font-size: 10px;
+    color: #CCC;
+}
+

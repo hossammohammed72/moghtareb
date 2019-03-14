@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
+use App\Room;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
@@ -43,9 +44,11 @@ class RoomController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $id)
     {
         //
+        return view('rooms.show');
+
     }
 
     /**
