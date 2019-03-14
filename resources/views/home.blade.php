@@ -12,8 +12,8 @@
 						<div class="title text-center">
 							<h1 class="mb-10 text-white our-h">Let us find you a partner	</h1>
 							<p class="text-white">Roommmates are our buddies and friends, So let's just pickthem right</p>
-                        <a class="primary-btn" href="{{route('room.add')}}">I want a Roommate</a>
-							<a class="primary-btn" href="{{route('person.add')}}">I want a Room</a>
+                        <a class="primary-btn" href="{{route('rooms.create')}}">I want a Roommate</a>
+							<a class="primary-btn" href="{{route('users.create')}}">I want a Room</a>
 						</div>
 					</div>
 				</div>

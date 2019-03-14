@@ -25,6 +25,7 @@ class RoomController extends Controller
     public function create()
     {
         //
+        return view('rooms.create');
     }
 
     /**
@@ -36,6 +37,42 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         //
+        $validator = Validator::make($request->all(), [
+        'beds' => 'required|min:0|numeric',
+        'cupboards' => 'required|min:0|numeric',
+        'desks' => 'required|min:0|numeric',
+        'rate' => 'required|min:0|numeric',
+        'city' => 'required|string',
+        'address' => 'required|string',
+        'phone' => 'required|string',
+        'image' => 'sometimes|image|mimes:jpg,png,jpeg,gif,svg'
+        ]);
+
+        if ($validator->fails())   
+            return response()->json(array('errors' => $validator->getMessageBag()->toArray()));
+     
+        $room = new Room();
+        $room->beds = $request->input('beds');
+        $room->cupboards = $request->input('cupboards');
+        $room->desks = $request->input('desks');
+        $room->rate = $request->input('rate');
+        $room->city = $request->input('city');
+        $room->address = $request->input('address');
+        $room->phone = $request->input('phone');
+
+        if ($request->file('file')) {
+            $image = $request->file('file');
+            $roomId = Room::max('id') + 1;
+            $name = "$roomId".'.'.$image->getClientOriginalExtension();
+            $destinationPath1 = public_path('/images');
+            $image->move($destinationPath1, $name);
+            $room->image = $name;
+        }
+        else 
+            $room->image = null;
+
+        $room->save();
+        return response()->json($room);  
     }
 
     /**
