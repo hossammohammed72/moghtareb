@@ -38,6 +38,7 @@ class RoomsTableSeeder extends Seeder
         $room->city = $faker->city;
         $room->rate = rand(1,5);
         $room->address = $faker->address;
+        $room->phone = $faker->phoneNumber;
         $room->image = $i.'.jpg';
         $room->save();
       }

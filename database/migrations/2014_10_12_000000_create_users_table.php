@@ -28,6 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('city');
             $table->boolean('gender');
             $table->integer('rate');
+            $table->string('phone');
             $table->enum('status',[0,1]);
             $table->rememberToken();
             $table->timestamps();

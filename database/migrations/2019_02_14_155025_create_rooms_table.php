@@ -35,6 +35,7 @@ class CreateRoomsTable extends Migration
             $table->integer('rent');
             $table->string('city');
             $table->integer('rate'); //
+            $table->string('phone');
             $table->string('address');
             $table->string('image');
             $table->timestamps();

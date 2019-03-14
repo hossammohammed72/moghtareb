@@ -29,6 +29,7 @@ class UsersTableSeeder extends Seeder
         $user->rent = rand(200,700);
         $user->gender = $i % 2 == 0 ? "1" : "0";
         $user->rate = rand(1,5);
+        $user->phone = $faker->phoneNumber;
         $user->save();
       }
     }
