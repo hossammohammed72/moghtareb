@@ -16,8 +16,6 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@index')->name('home.post');
 Route::get('/login', 'HomeController@login')->name('login');
 //Route::middleware('auth')->group(function(){
-Route::get('/room/add','RoomController@index')->name('room.add');
-Route::get('/person/add','PersonController@index')->name('person.add');
-Route::POST('/person/add','PersonController@index')->name('person.create');
-
+Route::resource('rooms','RoomController');
+Route::resource('users','UserController');
 //});
