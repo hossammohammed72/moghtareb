@@ -23,7 +23,7 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Tell Them How Awesome Your Room Is ?</h2>
-                    <form method="POST">
+                    <form method="POST" id="addRoom">
                         <div class="row row-space">
                             <div class="col-8 mt-3">
                                 <div class="input-group">
@@ -65,9 +65,9 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="subject">
                                             <option disabled="disabled" selected="selected">Choose option</option>
-                                            <option>Subject 1</option>
-                                            <option>Subject 2</option>
-                                            <option>Subject 3</option>
+                                            <option> 1</option>
+                                            <option> 2</option>
+                                            <option> 3</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -79,9 +79,9 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="subject">
                                             <option disabled="disabled" selected="selected">Choose option</option>
-                                            <option>Subject 1</option>
-                                            <option>Subject 2</option>
-                                            <option>Subject 3</option>
+                                            <option> 1</option>
+                                            <option> 2</option>
+                                            <option> 3</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -95,9 +95,9 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="subject">
                                             <option disabled="disabled" selected="selected">Choose option</option>
-                                            <option>Subject 1</option>
-                                            <option>Subject 2</option>
-                                            <option>Subject 3</option>
+                                            <option> 1</option>
+                                            <option> 2</option>
+                                            <option> 3</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -109,9 +109,12 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="subject">
                                             <option disabled="disabled" selected="selected">Choose option</option>
-                                            <option>Subject 1</option>
-                                            <option>Subject 2</option>
-                                            <option>Subject 3</option>
+                                            <option>Aswan</option>
+                                            <option>Luxor</option>
+                                            <option>Qena</option>
+                                            <option>Sohag</option>
+                                            <option>Assuiot</option>
+                                            <option>Menya</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -246,34 +249,11 @@ $( function() {
 
 
 <script type="text/javascript">
-$.ajaxSetup({
-  headers: {
-    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-  }
-});
 
 $('#addRoom').submit(function(e){
     e.preventDefault();
-	var data = new FormData(this);
-    $.ajax({
-        type: 'POST',
-        url: "{{route('rooms.store')}}",
-        data: data,
-	    dataType:'JSON',
-	    contentType: false,
-	    cache: false,
-	    processData: false,
-        success: function(data,status) {
-        	console.log("request sent");
-            if ((data.errors)) {
-            	toastr.error("Check Your Inputs Please", 'Validation' , {timeOut: 3000});
-            } 
-            else 
-            {
-                toastr.success('Room added Successfully!', 'Done', {timeOut: 3000});
-            }
-        },
-    });
+    var link ="{{route('users.show',1)}}";
+    window.location.replace(link);
 });
 </script>
 @endsection

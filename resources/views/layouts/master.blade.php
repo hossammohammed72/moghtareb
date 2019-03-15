@@ -27,6 +27,8 @@
 		<link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
 		<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">
 		<link rel="stylesheet" href="{{asset('css/main.css')}}">
+        <link rel="stylesheet" href="{{asset('css/profile.css')}}">
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"  media="screen">
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -56,10 +58,10 @@
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li class="menu-active"><a href="index.html">Home</a></li>
+			          <li class="menu-active"><a href="{{route('home')}}">Home</a></li>
 			          <li><a href="about-us.html">About Us</a></li>
-			          <li><a href="category.html">Rooms</a></li>
-			        <li><a href="price.html">Roommates</a></li>
+			          <li><a href="{{route('rooms.show',1)}}">Rooms</a></li>
+			        <li><a href="{{route('users.show',1)}}">Roommates</a></li>
 			       
 			          @if(!session()->get('waleed'))<li><a class="ticker-btn" href="#">Signup</a></li>
 			          <li><a class="ticker-btn" href="{{route('login')}}">Login</a></li>
@@ -161,6 +163,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
+
 		<!-- add files -->
 	    <!-- Vendor JS-->
 	    <script src="{{asset('add/vendor/select2/select2.min.js')}}"></script>
@@ -168,6 +171,8 @@
 	    <script src="{{asset('add/vendor/datepicker/daterangepicker.js')}}"></script>
 	    <!-- Main JavaScript-->
 	    <script src="{{asset('add/js/global.js')}}"></script>
+	    <!-- sweetalert -->
+    	<script type="text/javascript" src="{{asset('js/vendor/sweetalert/sweetalert.min.js')}}"></script>
 		@yield('scripts')
 		<!-- toastr notifications --> 
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
