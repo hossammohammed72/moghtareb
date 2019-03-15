@@ -17,140 +17,135 @@
 <!-- End banner Area -->
 
 <!-- Start post Area -->
-<section class="post-area section-gap">
-	<div class="container" style="margin-top: -55px;">
-		<div class="row justify-content-center d-flex">
-			<div class="col-lg-12 post-list">
-				<div class="single-post d-flex flex-row" style="border-radius:40px; ">
-					<div class="col-lg-12">
-                        <h2 class="title">Tell Them How Awesome Your Room is ?</h2>
-						<form class="form-area " action='{{route('home')}}#rooms' class="contact-form text-right" style="margin-top: 20px;" id="addRoom">
-							@csrf
-                            <div class="row">
-								<div class="col-lg-12 form-group">
-                                   <div class='row'>
-                                        <div class='col-md-3'>
-                                            <label for='bed'>
-                                                <i class='fa fa-bed'></i> Beds?
-                                            </label>
-                                            <select name="" id='' class="selectpicker show-menu-arrow form-control">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                </select>
-                                        </div>
-                                        <div class='col-md-3'>
-                                                <label for='bed'>
-                                                    <i class='fas fa-cabinet-filling'></i>Cupboards?
-                                                </label>
-                                                <select name="cupboard" id='cupboard' class="selectpicker show-menu-arrow form-control">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                    </select>
-                                        </div>
-                                        <div class='col-md-3'>
-                                                <label for='bed'>
-                                                    <i class='fas fa-office'></i>Desks?
-                                                </label>
-                                                <select name="desk" id='desk' class="selectpicker show-menu-arrow form-control">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                    </select>
-                                        </div>
-                                        <div class='col-md-3'>
-                                                <label for='bed'>
-                                                    <i class='fas fa-office'></i>Rent?
-                                                </label>
-                                                <select name="rent" id='rent' class="selectpicker show-menu-arrow form-control">
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                    </select>
-                                        </div>
+<section class="post-area">
+    <div class="page-wrapper p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Tell Them How Awesome Your Room Is ?</h2>
+                    <form method="POST">
+                        <div class="row row-space">
+                            <div class="col-8 mt-3">
+                                <div class="input-group">
+                                    <label class="label">Age ?</label>
+                                    <span style="margin: 10px;"></span>
+                                    <input class="input--style-4" type="number" name="age" style="width: 80px;">
+                                    <span style="margin: 10px;">To:</span> 
+                                    <input class="input--style-4" type="number" name="age" style="width: 80px;">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">Rent ?</label>
+                                    <input class="input--style-4" type="number" name="last_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-6">
+                                <div class="input-group">
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input type="radio" checked="checked" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
                                     </div>
-                                    <div class='row'>
-                                        <div class="col-md-6 form-group">
-                                            <div class="form-group col-md-6">
-                                                <label for='city'>City</label>
-                                                <select name="city" id='city' class="selectpicker show-menu-arrow form-control">
-                                                    <option value="Aswan">Aswan</option>
-                                                    <option value="Luxor">Luxor</option>
-                                                    <option value="Qena">Qena</option>
-                                                    <option value="Sohag">Sohag</option>
-                                                    <option value="Assiut">Assiut</option>
-                                                    <option value="Minya">Minya</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 form-group">
-                                                <div class="form-group col-md-6">
-                                                    <label for='city'>age</label>
-                                                    <select name="city" id='city' class="selectpicker show-menu-arrow form-control">
-                                                        <option value="Aswan">19</option>
-                                                        <option value="Luxor">20</option>
-                                                        <option value="Qena">21</option>
-                                                        <option value="Sohag">22</option>
-                                                        <option value="Assiut">23</option>
-                                                        <option value="Minya">24</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="row row-space">
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">Beds ?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Subject 1</option>
+                                            <option>Subject 2</option>
+                                            <option>Subject 3</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
                                     </div>
-                                    <br>
-                                    <div class='row'>
-                                        <div class='col-md-6'>
-                                            <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                                                    </div>
-                                                    <div class="custom-file">
-                                                        <input type="file" name='image' class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>                                
+                            </div>
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">Cupboards ?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Subject 1</option>
+                                            <option>Subject 2</option>
+                                            <option>Subject 3</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
                                     </div>
-
-                                    <div class='row'>
-                                        <div class='col-md-12'>
-                                            <span class="button-checkbox">
-                                                <button type="button" class="btn" style='margin:10px;' data-color="info">AC</button>
-                                                <input type="checkbox" name="smoke" class="hidden"  style="display: none;">
-                                            </span>
-                                            <span class="button-checkbox" style='margin:10px;'>
-                                                    <button type="button" class="btn" data-color="info">Smoking</button>
-                                                    <input type="checkbox" name="smoke" class="hidden"  style="display: none;">
-                                            </span>
-                                            <span class="button-checkbox" style='margin:10px;'>
-                                                    <button type="button" class="btn" data-color="info">Balcony</button>
-                                                    <input type="checkbox" name="smoke" class="hidden"  style="display: none;">
-                                            </span>
-                                        </div>
+                                </div>                                
+                            </div>
+                        </div>                      
+                        <div class="row row-space">
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">Desks ?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Subject 1</option>
+                                            <option>Subject 2</option>
+                                            <option>Subject 3</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
                                     </div>
-                                        <span class="button-checkbox">
-                                            <button type="button" class="btn" style='margin:10px;' data-color="info">Loud Voice</button>
-                                            <input type="checkbox" name="voice" class="hidden"  style="display: none;">
-                                        </span>
-                                        <span class="button-checkbox">
-                                            <button type="button" style='margin:10px;' class="btn" data-color="info">Student </button>
-                                            <input type="checkbox" name="student" class="hidden" style="display: none;">
-                                        </span>
-                                    <br>
-                                    <br>
-                                         <button type="submit" class="primary-btn mt-20 text-white pull-right">Submit</button>
-                                            <div class="mt-20 alert-msg" style="text-align: left;"></div>
-
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                                </div>                                
+                            </div>
+                            <div class="col-4">
+                                <div class="input-group">
+                                    <label class="label">City ?</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Subject 1</option>
+                                            <option>Subject 2</option>
+                                            <option>Subject 3</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label">Phone Number ?</label>
+                            <input class="input--style-4" type="text" name="cellphone">
+                        </div>                          
+                        <div class="row">
+                            <div class='col-12'>
+                                <div class="input-group">
+                                         <div class="input-group-prepend custom">
+                                             <label class="custom-file-label" for="inputGroupFile01">Choose file ?</label>
+                                        </div>
+                                       <div class="custom-file">
+                                         <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                          </div>
+                                            <input type="file" name='image' class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                         </div>
+                                       </div>
+                                </div>     
+                            </div>                                                     
+                        </div>                            
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue my-button" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- End post Area -->
 
@@ -271,7 +266,7 @@ $('#addRoom').submit(function(e){
         success: function(data,status) {
         	console.log("request sent");
             if ((data.errors)) {
-            	toastr.error("Check Your Inputs", 'Validation' , {timeOut: 3000});
+            	toastr.error("Check Your Inputs Please", 'Validation' , {timeOut: 3000});
             } 
             else 
             {

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\User;
-use App\Room;
+use App\Models\Room;
 use Illuminate\Http\Request;
+use Validator;
 
 class RoomController extends Controller
 {

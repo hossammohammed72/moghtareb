@@ -30,6 +30,22 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"  media="screen">
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!-- toastr notifications -->
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+		<!-- add files -->
+    	<link href="{{asset('add/vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
+	    <link href="{{asset('add/vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
+	    <!-- Font special for pages-->
+	    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+	    <!-- Vendor CSS-->
+	    <link href="{{asset('add/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
+	    <link href="{{asset('add/vendor/datepicker/daterangepicker.css')}}" rel="stylesheet" media="all">
+
+	    <!-- Main CSS-->	
+	    <link href="{{asset('add/css/m.css')}}" rel="stylesheet" media="all">
+
+    	
     </head>
 	<body>
 		  <header id="header" id="home">
@@ -144,8 +160,16 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 
-		<!-- (Optional) Latest compiled and minified JavaScript translation files -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/i18n/defaults-*.min.js"></script>
+		<!-- add files -->
+	    <!-- Vendor JS-->
+	    <script src="{{asset('add/vendor/select2/select2.min.js')}}"></script>
+	    <script src="{{asset('add/vendor/datepicker/moment.min.js')}}"></script>
+	    <script src="{{asset('add/vendor/datepicker/daterangepicker.js')}}"></script>
+	    <!-- Main JavaScript-->
+	    <script src="{{asset('add/js/global.js')}}"></script>
 		@yield('scripts')
+		<!-- toastr notifications --> 
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 	</body>
 </html>
